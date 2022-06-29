@@ -1,8 +1,8 @@
-#Spring MVC
+# Spring MVC
 
 _Made by me :)_
 
-#####This is a course provided by Coursera
+##### This is a course provided by Coursera
 
 ![image](http://www.opendart.com/uploads/2daeec64-6b5c-453f-ac19-1e5e2ce4774e.png)
 
