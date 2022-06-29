@@ -10,6 +10,7 @@
 <body>
     <div>
         <p>Student Full Name: ${student.firstName}, ${student.lastName}</p>
+        <p>Student Country: ${student.country}</p>
     </div>
 </body>
 </html>
