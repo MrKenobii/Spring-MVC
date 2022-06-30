@@ -1,9 +1,12 @@
 package com.anilduyguc.controller;
 
 import com.anilduyguc.entity.Customer;
+import org.springframework.beans.propertyeditors.StringTrimmerEditor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.WebDataBinder;
+import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -12,6 +15,12 @@ import javax.validation.Valid;
 @RequestMapping("/customer")
 @Controller
 public class CustomerController {
+
+    @InitBinder // Pre-Process every String from data
+    public void initBinder(WebDataBinder webDataBinder){ // Removes leading and trailing white space
+                                                         // If String has only white space, trim it to null
+        webDataBinder.registerCustomEditor(String.class, new StringTrimmerEditor(true));
+    }
 
     @RequestMapping("/show-form")
     public String getCustomerForm(Model model){
