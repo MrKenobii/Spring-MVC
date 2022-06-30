@@ -18,7 +18,7 @@ public class CustomerController {
 
     @InitBinder // Pre-Process every String from data
     public void initBinder(WebDataBinder webDataBinder){ // Removes leading and trailing white space
-                                                         // If String has only white space, trim it to null
+                                                         // If String has only white space, trim it to null!
         webDataBinder.registerCustomEditor(String.class, new StringTrimmerEditor(true));
     }
 
