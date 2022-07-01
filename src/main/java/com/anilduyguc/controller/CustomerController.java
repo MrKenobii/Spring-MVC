@@ -18,7 +18,7 @@ public class CustomerController {
 
     @InitBinder // Pre-Process every String from data
     public void initBinder(WebDataBinder webDataBinder){ // Removes leading and trailing white space
-                                                         // If String has only white space, trim it to null!
+        // If String has only white space, trim it to null!
         webDataBinder.registerCustomEditor(String.class, new StringTrimmerEditor(true));
     }
 
@@ -31,7 +31,7 @@ public class CustomerController {
     @RequestMapping("/process-form")
     public String processForm(@Valid @ModelAttribute("customer") Customer customer,
                               BindingResult bindingResult){ // @Valid performs a validation rule
-                                                            // results of validation placed in BindingResult class
+        // results of validation placed in BindingResult class
         if (bindingResult.hasErrors()) return "customer-form";
         return  "customer-confirmation";
     }
