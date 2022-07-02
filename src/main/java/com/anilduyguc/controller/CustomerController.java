@@ -32,6 +32,7 @@ public class CustomerController {
     public String processForm(@Valid @ModelAttribute("customer") Customer customer,
                               BindingResult bindingResult){ // @Valid performs a validation rule
         // results of validation placed in BindingResult class
+        System.out.println("\n\n\n Binding result: " + bindingResult + "\n\n\n");
         if (bindingResult.hasErrors()) return "customer-form";
         return  "customer-confirmation";
     }
