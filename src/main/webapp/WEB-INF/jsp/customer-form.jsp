@@ -24,7 +24,12 @@
                 Last Name (*): <form:input path="lastName" />
                 <form:errors path="lastName" cssClass="error" /> <%-- it should give an error from the @NotNull  --%>
             </p>                                                <%--if lastName is not given in the form --%>
+            <p>
+                Free Passes: <form:input path="freePasses" />
+                <form:errors path="freePasses" cssClass="error" />
+            </p>
             <input type="submit" value="Submit" />
+
 
         </form:form>
 

@@ -1,5 +1,7 @@
 package com.anilduyguc.entity;
 
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
@@ -8,6 +10,18 @@ public class Customer {
     @NotNull(message ="is required") // default error message when error occurs
     @Size(min = 1, message = "is required") // default error message when error occurs
     private String lastName;
+
+    @Min(value = 0, message = "Must be greater than or equal to 0")
+    @Max(value = 10, message = "Must be less than or equal to 10")
+    private int freePasses;
+
+    public int getFreePasses() {
+        return freePasses;
+    }
+
+    public void setFreePasses(int freePasses) {
+        this.freePasses = freePasses;
+    }
 
     public String getFirstName() {
         return firstName;
