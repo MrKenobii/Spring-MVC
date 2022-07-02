@@ -28,6 +28,14 @@
                 Free Passes: <form:input path="freePasses" />
                 <form:errors path="freePasses" cssClass="error" />
             </p>
+            <p>
+                Postal Code: <form:input path="postalCode" />
+                <form:errors path="postalCode" cssClass="error" />
+            </p>
+            <p>
+                Email: <form:input path="email" />
+                <form:errors path="email" cssClass="error" />
+            </p>
             <input type="submit" value="Submit" />
 
 
