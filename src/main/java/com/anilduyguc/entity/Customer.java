@@ -1,5 +1,7 @@
 package com.anilduyguc.entity;
 
+import com.anilduyguc.annotation.CourseCode;
+
 import javax.validation.constraints.*;
 
 public class Customer {
@@ -19,6 +21,17 @@ public class Customer {
 
     @Pattern(regexp = "^[a-zA-Z0-9_!#$%&’*+/=?`{|}~^.-]+@[a-zA-Z0-9-]+[.][a-z]+$", message = "invalid email")
     private String email;
+
+    @CourseCode
+    private String courseCode;
+
+    public String getCourseCode() {
+        return courseCode;
+    }
+
+    public void setCourseCode(String courseCode) {
+        this.courseCode = courseCode;
+    }
 
     public String getPostalCode() {
         return postalCode;
